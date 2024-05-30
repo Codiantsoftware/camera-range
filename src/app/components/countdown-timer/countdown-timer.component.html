@@ -1,0 +1,15 @@
+<div class="mainWrapper countDown text-center">
+  <h1 class="mt-40">Vote Counting Starts On : <span class="blue">4 June 2024 8:00 AM</span></h1>
+  <div class="countDownWrapper">
+    <ul>
+      <li>
+        <p *ngIf="secondsLeft$ | async as secondsLeft">
+          Seconds remaining until the countdown begins: <strong class="blue">{{ secondsLeft }}</strong>
+        </p>
+      </li>
+      <li>
+        <p>Remaining Time: <strong class="blue">{{ formattedTime }}</strong></p>
+      </li>
+    </ul>
+  </div>
+</div>

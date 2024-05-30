@@ -1,0 +1,57 @@
+<div class="mainWrapper mt-40">
+  <h1>Software Camera Selection</h1>
+  <h2>Hardware Cameras Available:</h2>
+  <div >
+    <ul>
+      <li *ngFor="let camera of hardwareCameras let i = index">
+        <h3>Camera {{i+1}}: </h3>
+        <div class="userInfo d-flex align-item-center">
+          <p>Distance: <strong>{{ camera[0] }} </strong></p>
+          <p> Light: <strong>{{ camera[1] }}</strong></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div class="formWrapper">
+      <h2>Choose the range of the camera's distance and light by specifying minimum and maximum values. </h2>
+      <div class="form-group">
+        <label for="distanceMin">Minimum Distance:</label>
+        <input type="number" id="distanceMin" name="distanceMin" [(ngModel)]="requiredDistanceRange[0]">
+      </div>
+      <div class="form-group">
+        <label for="distanceMax">Maximum Distance:</label>
+        <input type="number" id="distanceMax" name="distanceMax" [(ngModel)]="requiredDistanceRange[1]">
+      </div>
+      <div class="form-group">
+        <label for="lightMin">Minimum Light:</label>
+        <input type="number" id="lightMin" name="lightMin" [(ngModel)]="requiredLightRange[0]">
+      </div>
+      <div class="form-group">
+        <label for="lightMax">Maximum Light:</label>
+        <input type="number" id="lightMax" name="lightMax" [(ngModel)]="requiredLightRange[1]">
+      </div>
+      <div class="form-group">
+        <p>Required Distance Range: <strong>{{ requiredDistanceRange[0] }},{{ requiredDistanceRange[1] }}</strong></p>
+        <p>Required Light Range: <strong>{{ requiredLightRange[0] }},{{ requiredLightRange[1] }}</strong></p>
+      </div>
+      <div class="form-group text-right">
+        <button (click)="onSubmit()">Submit</button>
+      </div>
+
+
+      <span *ngIf="result == false" class="error">The available hardware cameras do not meet your requirements.</span>
+    </div>
+    <div *ngIf="result">
+      <div class="mt-40">
+        <h2>Matched Hardware Cameras:</h2>
+        <ul class="List">
+          <!-- <li *ngFor="let camera of result"><span>Distance: <strong>{{ camera[0] }}</strong> Light: <strong>{{ camera[1] }}</strong></span></li> -->
+          <li *ngFor="let camera of matchCameras"><span><strong>Camera {{ camera+1 }}</strong></span></li>
+        </ul>
+      </div>
+  </div>
+
+  </div>
+
+</div>

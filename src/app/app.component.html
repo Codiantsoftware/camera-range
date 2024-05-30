@@ -1,0 +1,11 @@
+<div class="topnav pl-0 ">
+  <div class="mainWrapper text-center">
+    <div [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: false }" class="d-inline">
+      <a routerLink="/count-down">Count Down</a>
+    </div>
+    <div [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: false }" class="d-inline"> <a routerLink="/camera">
+        Camera</a></div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
