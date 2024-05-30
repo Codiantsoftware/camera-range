@@ -10,13 +10,14 @@ body{font-family: "Roboto", sans-serif;margin:0;padding:0;background-color:#f5f6
 .justify-content-between{justify-content:space-between;}
 .text-right{text-align:right;}
 .mt-40{margin-top:40px;}
+.mb-40{margin-bottom:40px;}
 h1{font-size:24px !important;margin-bottom:15px;}
 h2{font-size:20px !important;margin-top:0;margin-bottom:15px;font-weight:500;}
 h3{font-size:18px !important;margin-top:0;font-weight:500;color:#364a63;}
 .blue{color:#204478;}
 p{margin-top:0;}
-ul{padding-left:0;margin-bottom:30px;display:flex;align-items:center; justify-content:space-between;width:100%;max-width: 100%;margin-top:12px;}
-ul li{padding:20px;box-shadow: 0px 1px 3px 0px rgba(54, 74, 99, .05);background-color:white;list-style:none;width:29%;}
+ul{padding-left:0;margin-bottom:20px;display:flex;align-items:center;flex-wrap:wrap; width:100%;max-width: 100%;margin-top:12px;justify-content:start;}
+ul li{padding:20px;box-shadow: 0px 1px 3px 0px rgba(54, 74, 99, .05);background-color:white;list-style:none;width:29%;margin-right:10px;margin-block:5px;}
 ul li p{font-size:14px;font-weight:100;margin-bottom:0;}
 ul.List{flex-wrap:wrap;justify-content:normal;}
 ul.List li{width:auto;}
